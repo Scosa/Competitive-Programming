@@ -3,6 +3,7 @@ using namespace std;
 int n;
 vector<long long > A(201010);
 long long use;
+
 bool ok(long long t){
 	for(int i = 0; i < n; i++){
 		int cnt1 = lower_bound(A.begin() + i, A.begin() + i + n, use + A[i]) - A.begin();
@@ -31,14 +32,11 @@ int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(0);
 
-
 	cin >> n;
 
 	A[0] = 0;
 	for(int i = 1; i <= n; i++) cin >> A[i], A[i] += A[i - 1],A[n + i] = A[i]; 
-	//cout << A[n] << endl;
 	for(int i = n + 1; i <= 2 * n; i++) A[i] = A[i] + A[n];
-	//for(int i = 0; i <= 2 * n; i++) cout << A[i] << ' ';
 
 	long long ans = binary_search(1000000000000000);
 
