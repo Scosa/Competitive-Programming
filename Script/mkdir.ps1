@@ -13,7 +13,7 @@ if(!(Test-Path $cpath)){
 }
 
 $path = "${path}/${contestID}_"
-$probCount = Read-Host "Put the number of problems"
+$probCount = Read-Host "Put the number of problems ex) A-D → 4 A-F → 6"
 $probCount = [int]$probCount
 
 for($i = 0; $i -lt $probCount; $i++){
