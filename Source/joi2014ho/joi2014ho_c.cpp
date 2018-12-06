@@ -41,5 +41,4 @@ int main(){
 	long long ans = binary_search(1000000000000000);
 
 	cout << ans << endl;
-
 }
