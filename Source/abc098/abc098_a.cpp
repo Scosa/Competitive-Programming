@@ -1,8 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-
-}
+if(B[i] & (1 << j) && B[i] & 1 << (j - 1)) Bbit[j][3]++;
+      else if(B[i] & (1 << j) && !(B[i] & 1 << (j - 1))) Bbit[j][2]++;
+      else if(!(B[i] & (1 << j)) && (B[i] & 1 << (j - 1))) Bbit[j][1]++;
+      else if(!(B[i] & (1 << j)) && !(B[i] & 1 << (j - 1))) Bbit[j][0]++;
